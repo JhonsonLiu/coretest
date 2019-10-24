@@ -18,8 +18,8 @@
 #WORKDIR /app
 #COPY --from=publish /app .
 #ENTRYPOINT ["dotnet", "test.dll"]
-FROM microsoft/dotnet:2.2-sdk
+FROM microsoft/dotnet:2.1-sdk
 WORKDIR /publish
-COPY . /publish
+COPY /. /publish
 EXPOSE 8888
 ENTRYPOINT ["dotnet", "test.dll"]
