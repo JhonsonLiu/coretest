@@ -20,7 +20,7 @@ namespace test
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
             .UseKestrel()
-            .UseUrls("http://127.0.0.1:8888")
+            .UseUrls("http://0.0.0.0:8888")
             .UseContentRoot(Directory.GetCurrentDirectory())
             .UseStartup<Startup>();
     }
